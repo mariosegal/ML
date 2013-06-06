@@ -20,7 +20,11 @@ idx = zeros(size(X,1), 1);
 %
 % Note: You can use a for-loop over the examples to compute this.
 %
-
+points=size(X,2);
+%cycle thorugh the examples, do all else vectorized;
+for i = 1:size(X)(1)
+	[m idx(i)] = min(sum((bsxfun(@minus,X(i,:),centroids)).^2,2));
+endfor
 
 
 

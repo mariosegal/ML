@@ -35,10 +35,10 @@ idx = zeros(m, 1);
 for i=1:max_iters
     
     % Output progress
-    fprintf('K-Means iteration %d/%d...\n', i, max_iters);
-    if exist('OCTAVE_VERSION')
-        fflush(stdout);
-    end
+    %fprintf('K-Means iteration %d/%d...\n', i, max_iters);
+    %if exist('OCTAVE_VERSION')
+    %    fflush(stdout);
+    %end
     
     % For each example in X, assign it to the closest centroid
     idx = findClosestCentroids(X, centroids);
