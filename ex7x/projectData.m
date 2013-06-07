@@ -18,8 +18,11 @@ Z = zeros(size(X, 1), K);
 %                    projection_k = x' * U(:, k);
 %
 
-
-
+Z=U(:,1:K)'*X';
+%they confusingly load X as a m*n matrix, but then expect it to be a n*m, which means
+%their formula needs to be adjusted, or I have to transpose things before
+%
+Z=Z';
 % =============================================================
 
 end
