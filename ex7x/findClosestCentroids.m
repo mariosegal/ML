@@ -22,9 +22,21 @@ idx = zeros(size(X,1), 1);
 %
 points=size(X,2);
 %cycle thorugh the examples, do all else vectorized;
-for i = 1:size(X)(1)
-	[m idx(i)] = min(sum((bsxfun(@minus,X(i,:),centroids)).^2,2));
-endfor
+%for i = 1:size(X)(1)
+%	[m idx(i)] = min(sum((bsxfun(@minus,X(i,:),centroids)).^2,2));
+%endfor
+
+[m n]=size(X);
+
+%vectorized code;
+
+aux=-(2*X*centroids')+(ones(m,1)*((centroids.^2)*ones(n,1))'); 
+[min1 idx] = min(aux,[],2);
+
+%this is the rsult of expanding (a-b)^2, and realizing that for each row x2 will be a;
+%constant so why calculate it, plus the aux matrices to make it all work
+%X=[m,n] centroids'=[n,k] so first term is [m,k];
+%second term is then [m,1]*([k,n]*[n,1]= [[k,1])'= [m,k], cosistent with first;
 
 
 

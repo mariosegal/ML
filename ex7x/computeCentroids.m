@@ -25,11 +25,15 @@ centroids = zeros(K, n);
 %
 % Note: You can use a for-loop over the centroids to compute this.
 %
-for i = 1:K
-   centroids(i,:)=mean(X(idx==i,:),1);
-endfor
 
+%with loop;
+%for i = 1:K
+%   centroids(i,:)=mean(X(idx==i,:),1);
+%endfor
 
+%vectorized code;
+aux=bsxfun(@eq, idx, 1:K);
+centroids = aux'*X ./ ((ones(n,1)*sum(aux))');
 % =============================================================
 
 
