@@ -131,19 +131,22 @@ my_ratings = zeros(1682, 1);
 my_ratings(1) = 4;
 
 % Or suppose did not enjoy Silence of the Lambs (1991), you can set
-my_ratings(98) = 2;
+my_ratings(98) = 3;
 
 % We have selected a few movies we liked / did not like and the ratings we
 % gave are as follows:
-my_ratings(7) = 3;
-my_ratings(12)= 5;
-my_ratings(54) = 4;
-my_ratings(64)= 5;
-my_ratings(66)= 3;
-my_ratings(69) = 5;
-my_ratings(183) = 4;
-my_ratings(226) = 5;
-my_ratings(355)= 5;
+
+%my_ratings(12)= 5;
+my_ratings(54) = 4; %Outbreak;
+%my_ratings(152)= 5; %Fish called Wanda;
+%my_ratings(582)= 3; %The Piano;
+my_ratings(69) = 5; %Forrest Gump;
+my_ratings(87) = 4; %Bobby Fisher;
+my_ratings(449) = 4; %Star Trek Motion Picture;
+my_ratings(269)= 3; %Contact;
+my_ratings(272)= 5; %Good will Hunting;
+my_ratings(462)= 5; %Water for chocolate;
+%my_ratings(468)= 4; %Rudy;
 
 fprintf('\n\nNew user ratings:\n');
 for i = 1:length(my_ratings)

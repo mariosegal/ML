@@ -1,0 +1,7 @@
+function [idx list] = findMovies(str1)
+
+IndexC = strfind(movieList, 'bla');
+idx = find(not(cellfun('isempty', IndexC)));
+list = movieList(idx);
+
+end;
