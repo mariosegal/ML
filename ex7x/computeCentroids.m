@@ -32,7 +32,8 @@ centroids = zeros(K, n);
 %endfor
 
 %vectorized code;
-aux=bsxfun(@eq, idx, 1:K);
+%aux=bsxfun(@eq, idx, 1:K);
+aux=[1:K]==idx;
 centroids = aux'*X ./ ((ones(n,1)*sum(aux))');
 % =============================================================
 
